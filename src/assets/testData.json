@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "productname": "Ted Right",
+            "netprice": "150",
+            "productionprice": "250",
+            "grossmargin": "",
+            "prodHierarchyProps": {
+                "expanded": true,
+                "groupExpanded": true,
+                "lineTypeCd": "Config",
+                "groupId": "7123456-01",
+                "assetItemNr": "1",
+                "hasChildren": true,
+                "cnfgnParentLineItemId": "0"
+            }
+        },
+        {
+            "productname": "Ted Right",
+            "netprice": "150",
+            "productionprice": "250",
+            "grossmargin": "",
+            "prodHierarchyProps": {
+                "expanded": true,
+                "groupExpanded": true,
+                "lineTypeCd": "Product",
+                "groupId": "7123456-01",
+                "assetItemNr": "2",
+                "hasChildren": false,
+                "cnfgnParentLineItemId": "0"
+            }
+        }
+    ]
+}

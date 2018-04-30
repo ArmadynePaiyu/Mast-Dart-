@@ -1,0 +1,36 @@
+  .cell-title {
+      font-weight: bold;
+    }
+
+    .cell-effort-driven {
+      text-align: center;
+    }
+
+    .toggle {
+      height: 9px;
+      width: 9px;
+      display: inline-block;
+    }
+
+    .toggle.expand {
+      background: url(http://mleibman.github.io/SlickGrid/images/expand.gif) no-repeat center center;
+    }
+
+    .toggle.collapse {
+      background: url(http://mleibman.github.io/SlickGrid/images/collapse.gif) no-repeat center center;
+    }
+
+    /*TotalsPlugin*/
+
+    .total-spacer-row {
+    visibility: hidden;
+}
+
+.slick-viewport.totals-viewport {
+    position: relative;
+    overflow: hidden;
+}
+
+.slick-viewport .slick-row.totals {
+    position: relative;
+}

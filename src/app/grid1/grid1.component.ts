@@ -47,7 +47,10 @@ export class Grid1Component implements OnInit {
       autoEdit: true,
       asyncEditorLoading: true,
       selectable:true,
-      sortable:true
+      sortable:true,
+      createFooterRow: true,
+     showFooterRow: true,
+    footerRowHeight: 61
     };
  
     function myFilter(item) {
@@ -67,7 +70,25 @@ export class Grid1Component implements OnInit {
       return true;
     }
     
-
+function UpdateAllTotals(grid1) {
+    var columnIdx = grid1.getColumns().length;
+    while (columnIdx--) {
+      if(columnIdx!=0){
+      UpdateTotal(columnIdx, grid1);
+    }
+    }
+  }
+  function UpdateTotal(cell, grid1) {
+    var columnId = grid1.getColumns()[cell].id;
+    
+    var total = 0;
+    var i = data.length;
+    while (i--) {
+      total += (parseInt(data[i][columnId], 10) || 0);
+    }
+    var columnElement = grid1.getFooterRowColumn(columnId);
+    $(columnElement).html("Sum:  " + total);
+  }
 
 
     $(function () {
@@ -95,7 +116,9 @@ export class Grid1Component implements OnInit {
       for (var i in data) {
         var d = data[i];
         d['id'] = i
-
+ for (var j = 0; j < columns.length; j++) {
+        d[j] = Math.round(Math.random() * 10);
+      }
         parents.push(d.parent ? d.parent['id'] : d.parent);
       }
 
@@ -114,11 +137,15 @@ export class Grid1Component implements OnInit {
       grid = new Slick.Grid("#myGrid", dataView, columns, options);
       // grid.setSelectionModel(new Slick.CellSelectionModel());
       console.log(grid);
-      var totalsPlugin = new TotalsPlugin($.getScrollbarWidth());
-            grid.registerPlugin(totalsPlugin);
+       UpdateAllTotals(grid);
+      // var totalsPlugin = new TotalsPlugin($.getScrollbarWidth());
+      //       grid.registerPlugin(totalsPlugin);
       grid.onCellChange.subscribe(function (e, args) {
-        dataView.updateItem(args.item.id, args.item);
+       UpdateTotal(args.cell, args.grid);
       });
+      grid.onColumnsReordered.subscribe(function(e, args) {
+      UpdateAllTotals(args.grid);
+    }); 
 var selectActiveRow =  false,selectedRows;
 
  grid.setSelectionModel(new Slick.RowSelectionModel({
@@ -161,13 +188,13 @@ var selectActiveRow =  false,selectedRows;
       dataView.onRowCountChanged.subscribe(function (e, args) {
         grid.updateRowCount();
         grid.render();
-        totalsPlugin.render();
+        // totalsPlugin.render();
       });
 
       dataView.onRowsChanged.subscribe(function (e, args) {
         grid.invalidateRows(args.rows);
         grid.render();
-        totalsPlugin.render();
+        // totalsPlugin.render();
       });
     })
   }

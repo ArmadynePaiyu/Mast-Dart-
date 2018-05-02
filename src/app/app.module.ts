@@ -10,6 +10,8 @@ import { ExcelComponent } from './excel/excel.component';
 import { Grid1Component } from './grid1/grid1.component';
 import 'slickgrid';
 import 'jquery-ui';
+import { MenuComponent } from './menu/menu.component';
+import { MargindetailComponent } from './margindetail/margindetail.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import 'jquery-ui';
     AppComponent,
     FilterComponentComponent,
     ExcelComponent,
-    Grid1Component
+    Grid1Component,
+    MenuComponent,
+    MargindetailComponent
   ],
   imports: [
     BrowserModule,

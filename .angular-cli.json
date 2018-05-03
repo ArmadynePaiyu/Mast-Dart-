@@ -19,11 +19,13 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "styles.css",
         "../node_modules/slickgrid/css/smoothness/jquery-ui-1.11.3.custom.css",
         "../node_modules/slickgrid/slick.grid.css"
       ],
       "scripts": ["../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
       "../node_modules/slickgrid/lib/jquery.event.drag-2.3.0.js",
       "../node_modules/slickgrid/slick.core.js",
       "../node_modules/slickgrid/slick.grid.js",
@@ -35,10 +37,7 @@
       "../node_modules/slickgrid/lib/firebugx.js",
       "../node_modules/slickgrid/plugins/slick.cellcopymanager.js",
       "../node_modules/slickgrid/plugins/slick.draggablegrouping.js",
-      "../node_modules/slickgrid/slick.formatters.js",
-       "../node_modules/slickgrid/jquery.getscrollbarwidth.js",
-      "../node_modules/slickgrid/TotalsPlugin.js",
-      "../node_modules/slickgrid/TotalsDataView.js"
+      "../node_modules/slickgrid/slick.formatters.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

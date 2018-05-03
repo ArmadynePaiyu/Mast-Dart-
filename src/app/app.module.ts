@@ -11,7 +11,11 @@ import { Grid1Component } from './grid1/grid1.component';
 import 'slickgrid';
 import 'jquery-ui';
 import { MenuComponent } from './menu/menu.component';
-import { MargindetailComponent } from './margindetail/margindetail.component';
+import { SectionComponent } from './section/section.component';
+import { MarginSummaryComponent } from './section/margin-summary/margin-summary.component';
+import { MarginDetailComponent } from './section/margin-detail/margin-detail.component';
+import { DealViewComponent } from './section/deal-view/deal-view.component';
+import { DealInfoComponent } from './section/deal-view/deal-info/deal-info.component';
 
 
 @NgModule({
@@ -21,7 +25,11 @@ import { MargindetailComponent } from './margindetail/margindetail.component';
     ExcelComponent,
     Grid1Component,
     MenuComponent,
-    MargindetailComponent
+    SectionComponent,
+    MarginSummaryComponent,
+    MarginDetailComponent,
+    DealViewComponent,
+    DealInfoComponent
   ],
   imports: [
     BrowserModule,

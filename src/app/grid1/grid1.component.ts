@@ -133,7 +133,7 @@ function UpdateAllTotals(grid1) {
      // dataView.setAggregators([ new Slick.Data.Aggregators.Sum("value") ], false);
 
       // initialize the grid
-      var dataProvider = new TotalsDataView(dataView, columns);
+      //var dataProvider = new TotalsDataView(dataView, columns);
       grid = new Slick.Grid("#myGrid", dataView, columns, options);
       // grid.setSelectionModel(new Slick.CellSelectionModel());
       console.log(grid);

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MargindetailComponent } from './margindetail.component';
+import { MarginSummaryComponent } from './margin-summary.component';
 
-describe('MargindetailComponent', () => {
-  let component: MargindetailComponent;
-  let fixture: ComponentFixture<MargindetailComponent>;
+describe('MarginSummaryComponent', () => {
+  let component: MarginSummaryComponent;
+  let fixture: ComponentFixture<MarginSummaryComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MargindetailComponent ]
+      declarations: [ MarginSummaryComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MargindetailComponent);
+    fixture = TestBed.createComponent(MarginSummaryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

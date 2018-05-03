@@ -1,2 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+.pad-left0{
+    padding-left: 0px !important;
+}
+.margin-btm0{
+    margin-bottom:0px;
+}
+.dealview-bgColor{
+background-color: #425563;
+color: #e9ecef;
+}
+
+.pad15{
+    padding: 15px;
+}
+
+.padding-leftright0{
+    padding-left: 0px !important;
+    padding-right:0px !important;
+}
+.label-bold{
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+}
+.label-normal{
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+}
+.label-white{
+    color: #ffffff;
+}
+.label-black{
+    color: #333333;
+}
+.font12{
+    font-size: 12px;
+}
+.font-family{
+    font-family: ProximaNova;
+}

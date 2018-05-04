@@ -34,9 +34,33 @@ export class Grid1Component implements OnInit {
     var grid;
     var data = [];
     var columns = [
-      { id: "title", name: "Title", field: "title", formatter: toggleFormatter },
+      /*{ id: "title", name: "Title", field: "title", formatter: toggleFormatter },
       { id: "amount", name: "Amount", field: "amount" ,editor: Slick.Editors.Text,hasTotal:true},
-      { id: "weight", name: "Weight", field: "weight" ,editor: Slick.Editors.Text,hasTotal:true}
+      { id: "weight", name: "Weight", field: "weight" ,editor: Slick.Editors.Text,hasTotal:true}*/
+      { id: "checkBox", name: " ", field: "checkBox", },
+      { id: "configNumber", name: "Cfg No", field: "configNumber" },
+      { id: "prod", name: "Prod#", field: "prod" },
+      { id: "opt", name: "Opt", field: "opt" },
+      { id: "description", name: "Description", field: "description" },
+      { id: "pi", name: "PI", field: "pi" },
+      { id: "salesCountry", name: "Sales Ctry", field: "salesCountry" },
+      { id: "prodQuantity", name: "Prod Quantity", field: "prodQuantity" },
+      { id: "extendedNet", name: "Extended Net", field: "extendedNet" },
+      { id: "avgList", name: "AVG List - SBSC", field: "avgList" },
+      { id: "standardDiscount", name: "std Disc %", field: "standardDiscount" },
+      { id: "discountPercent", name: "Disc %", field: "discountPercent",editor: Slick.Editors.Text },
+      { id: "netPrice", name: "Net Price", field: "netPrice",editor: Slick.Editors.Text },
+      { id: "netRevenue", name: "Net Revenue", field: "netRevenue" },
+      { id: "grossMargin", name: "GM %", field: "grossMargin",editor: Slick.Editors.Text },
+      { id: "variableProductionCostMargin", name: "VPM %", field: "variableProductionCostMargin",editor: Slick.Editors.Text },
+      { id: "opertaingProfits", name: "OP %", field: "opertaingProfits",editor: Slick.Editors.Text },
+      { id: "costOfSales", name: "COS" , field: "costOfSales" },
+      { id: "distributorMarginPercent", name: "Distrib Margin %", field: "distributorMarginPercent",editor: Slick.Editors.Text },
+      { id: "distributorMargin", name: "Distrib Margin", field: "distributorMargin" },
+      { id: "resellerMarginPercent", name: "Reseller Margin %", field: "resellerMarginPercent",editor: Slick.Editors.Text },
+      { id: "resellerMargin", name: "Reseller Margin", field: "resellerMargin" },
+      { id: "endCustomerNetPricePercent", name: "End Cust Net Price %", field: "endCustomerNetPricePercent",editor: Slick.Editors.Text },
+      { id: "endCustomerNetPrice", name: "End Cust Net Price", field: "endCustomerNetPrice" }
     ];
 
     var options = {
@@ -93,22 +117,13 @@ function UpdateAllTotals(grid1) {
 
     $(function () {
       var indent = 0;
-      data = [{ title: 'Ravi', amount: '', price: '', weight: '46.79', indent: 0, parent: null },
-      { title: 'Ravi1', amount: '123456787', price: '55.90', weight: '-2.01', indent: 1, parent: { id: 0 } },
-      { title: 'Ravi2', amount: '12,200.00', price: '0.39', weight: '1', indent: 1, parent: { id: 0 } },
-      { title: 'Ravi3', amount: '301,000.00', price: '34.41', weight: '2', indent: 1, parent: { id: 0 } },
-      { title: 'Ravi4', amount: '38,500.00', price: '27.59', weight: '1.3', indent: 1, parent: { id: 0 } },
-      { title: 'Ravi5', amount: '', price: '', weight: '2.1', indent: 0, parent: null },
-      { title: 'Ravi6', amount: '301,000.00', price: '0.39', weight: '4.6', indent: 1, parent: { id: 5 } },
-      { title: 'Ravi7', amount: '-1,900.00', price: '27.59', weight: '1.3', indent: 1, parent: { id: 5 } },
-      { title: 'Ravi8', amount: '', price: '', weight: '2.1', indent: 0, parent: null },
-      { title: 'Ravi9', amount: '301,000.00', price: '34.41', weight: '3.3', indent: 1, parent: { id: 8 } },
-      { title: 'Ravi10', amount: '-1,200.00', price: '26.07', weight: '2.2', indent: 1, parent: { id: 8 } },
-      { title: 'Ravi11', amount: '', price: '', weight: '2.1', indent: 1, parent: { id: 8 } },
-      { title: 'Ravi12', amount: '38,750.0', price: '23.70', weight: '4.6', indent: 2, parent: { id: 11 } },
-      { title: 'Ravi13', amount: '301,000.00', price: '34.41', weight: '3.3', indent: 2, parent: { id: 11 } },
+      data = [
+      { configNumber: '001', prod: '766555-01', opt: '', description: 'HPE 455665 server', pi: 'SY', salesCountry: 'US',prodQuantity:'5', extendedNet:'449',avgList:'1,954',standardDiscount:'0.00%',discountPercent:'75.00%',netPrice:'449',netRevenue:'449',grossMargin:'100%',variableProductionCostMargin:'20.00',opertaingProfits:'10.00',costOfSales:'113',distributorMarginPercent:'678',distributorMargin:'30.00%',resellerMarginPercent:'15.00%',resellerMargin:'22.00%',endCustomerNetPricePercent:'5.00%',endCustomerNetPrice:'7.00%'},
+      { configNumber: '001', prod: '766555-01', opt: '', description: 'HPE 455665 server', pi: 'SY', salesCountry: 'US',prodQuantity:'5', extendedNet:'449',avgList:'1,954',standardDiscount:'0.00%',discountPercent:'75.00%',netPrice:'449',netRevenue:'449',grossMargin:'100%',variableProductionCostMargin:'20.00',opertaingProfits:'10.00',costOfSales:'113',distributorMarginPercent:'678',distributorMargin:'30.00%',resellerMarginPercent:'15.00%',resellerMargin:'22.00%',endCustomerNetPricePercent:'5.00%',endCustomerNetPrice:'7.00%'},
+      { configNumber: '001', prod: '766555-01', opt: '', description: 'HPE 455665 server', pi: 'SY', salesCountry: 'US',prodQuantity:'5', extendedNet:'449',avgList:'1,954',standardDiscount:'0.00%',discountPercent:'75.00%',netPrice:'449',netRevenue:'449',grossMargin:'100%',variableProductionCostMargin:'20.00',opertaingProfits:'10.00',costOfSales:'113',distributorMarginPercent:'678',distributorMargin:'30.00%',resellerMarginPercent:'15.00%',resellerMargin:'22.00%',endCustomerNetPricePercent:'5.00%',endCustomerNetPrice:'7.00%'}
+      /*{ title: 'Ravi13', amount: '301,000.00', price: '34.41', weight: '3.3', indent: 2, parent: { id: 11 } },
       { title: 'Ravi14', amount: '-1,200.00', price: '26.07', weight: '2.2', indent: 2, parent: { id: 11 } },
-      { title: 'Ravi15', amount: '0', price: '11.07', weight: '2.1', indent: 0, parent: null }]
+      { title: 'Ravi15', amount: '0', price: '11.07', weight: '2.1', indent: 0, parent: null }*/]
 
       var parents = [];
 

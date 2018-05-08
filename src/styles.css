@@ -1,5 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@font-face {
+    font-family: HPE-Bold;
+    src: url(assets/fonts/MetricHPE-Desktop-Bold.otf);
+}
+@font-face {
+    font-family: HPE-Regular;
+    src: url(assets/fonts/MetricHPE-Desktop-Regular.otf);
+}
+@font-face {
+    font-family: HPE-Normal;
+    src: url(assets/fonts/MetricHPE-Desktop-Medium.otf);
+}
 .pad-left0{
     padding-left: 0px !important;
 }
@@ -35,6 +47,7 @@ color: #e9ecef;
   line-height: 1.25;
   letter-spacing: normal;
   text-align: left;
+  font-family: HPE-Bold;
 }
 .label-normal{
   font-weight: normal;
@@ -43,6 +56,7 @@ color: #e9ecef;
   line-height: 1.25;
   letter-spacing: normal;
   text-align: left;
+  font-family: HPE-Regular;
 }
 .label-white{
     color: #ffffff;
@@ -83,4 +97,37 @@ font-size:24px;
 }
 
 
+
+.no-marleftright{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+.block{
+    display: block !important;
+}
+.inline-block{
+    display: inline-block !important;
+}
+.mar-right15{
+    margin-right: 15px;
+}
+.font-green{
+    color: #00b388;
+}
+.font16{
+    font-size: 16px;
+}
+.mar-bottom24{
+    margin-bottom: 24px;
+}
+.override-label{
+    margin-bottom: 0px !important;
+    padding-left: 0px !important;
+}
+.card-margin{
+    margin-top: 20px;
+    margin-bottom: 16px;
+    width: 100%;
+    border-radius: 0px !important;
+}
 

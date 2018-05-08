@@ -1,0 +1,13 @@
+<h6 class="mar-bottom24">
+  Select the Country for which you want to access within MAST</h6>
+<div class="row no-marleftright" *ngFor="let item of cntryPLData.data.country">
+  <label class="col-12 font-green label-bold font16 override-label">{{item.category}}</label>
+  <div class="card card-margin">
+    <div class="card-body">
+      <div *ngFor="let opt of item.options" class="inline-block mar-right15 col-2">
+        <input type="checkbox">
+        <label class="label-normal">{{opt}}</label>
+      </div>
+    </div>
+  </div>
+</div>

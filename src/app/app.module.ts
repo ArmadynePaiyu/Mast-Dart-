@@ -18,6 +18,7 @@ import { UserregistrationComponent } from './userregistration/userregistration.c
 import { ConfirmComponent } from './userregistration/confirm/confirm.component';
 import { SelfregistrationComponent } from './userregistration/selfregistration/selfregistration.component';
 import { NewuserregistrationComponent } from './userregistration/newuserregistration/newuserregistration.component';
+import { CountryPlselectionComponent } from './userregistration/country-plselection/country-plselection.component';
 
 
 @NgModule({
@@ -35,13 +36,14 @@ import { NewuserregistrationComponent } from './userregistration/newuserregistra
     UserregistrationComponent,
     ConfirmComponent,
     SelfregistrationComponent,
-    NewuserregistrationComponent
+    NewuserregistrationComponent,
+    CountryPlselectionComponent
   ],
   imports: [
     BrowserModule,
     AngularSlickgridModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [CountryPlselectionComponent]
 })
 export class AppModule { }

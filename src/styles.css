@@ -6,6 +6,15 @@
 .margin-btm0{
     margin-bottom:0px;
 }
+.margin-top14{
+   margin-top: 14.5px;
+}
+.margin-top22{
+   margin-top: 22.5px;
+}
+.margin-top49{
+    margin-top:49px;
+}
 .dealview-bgColor{
 background-color: #425563;
 color: #e9ecef;
@@ -31,7 +40,7 @@ color: #e9ecef;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.2;
+  line-height: 1.25;
   letter-spacing: normal;
   text-align: left;
 }
@@ -41,9 +50,37 @@ color: #e9ecef;
 .label-black{
     color: #333333;
 }
+.label-green{
+    color:#25ae88;
+}
 .font12{
     font-size: 12px;
 }
+.font16{
+   font-size: 16px;
+} 
+.font24{
+font-size:24px;
+}
+
 .font-family{
     font-family: ProximaNova;
 }
+.center {
+       margin: 0 auto;
+       width: 80%;
+  }
+  .margin-left{
+      margin-left: 25px;
+  }
+  .btn-center{
+      margin:0 auto;
+      width:35%;
+  }
+  
+.padding-top{
+    padding-top: 15px;
+}
+
+
+

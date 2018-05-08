@@ -1,0 +1,32 @@
+.back-to{
+    border-radius: 14.5px;
+    border: solid 1px #25ae88;
+    font-family: MetricHPE;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    /* text-align: left; */
+    color: #ffffff;
+    padding: 10px 25px 10px 25px;
+    background-color: #25ae88;
+    margin-top: 22px;
+    width: 320px;
+}
+.reg-req{
+    border-radius: 14.5px;
+    border: solid 1px #425563;
+    font-family: MetricHPE;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    color: #425563;
+    padding: 10px 25px 10px 25px;
+    background-color: #ffffff;
+ 
+}

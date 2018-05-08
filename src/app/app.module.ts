@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {AgGridModule} from 'ag-grid-angular/main';
-import { HotTableModule } from 'ng2-handsontable';
 import { AngularSlickgridModule } from 'angular-slickgrid';
 import * as $ from 'jquery';
 import { AppComponent } from './app.component';
@@ -16,6 +14,10 @@ import { MarginSummaryComponent } from './section/margin-summary/margin-summary.
 import { MarginDetailComponent } from './section/margin-detail/margin-detail.component';
 import { DealViewComponent } from './section/deal-view/deal-view.component';
 import { DealInfoComponent } from './section/deal-view/deal-info/deal-info.component';
+import { UserregistrationComponent } from './userregistration/userregistration.component';
+import { ConfirmComponent } from './userregistration/confirm/confirm.component';
+import { SelfregistrationComponent } from './userregistration/selfregistration/selfregistration.component';
+import { NewuserregistrationComponent } from './userregistration/newuserregistration/newuserregistration.component';
 
 
 @NgModule({
@@ -29,12 +31,14 @@ import { DealInfoComponent } from './section/deal-view/deal-info/deal-info.compo
     MarginSummaryComponent,
     MarginDetailComponent,
     DealViewComponent,
-    DealInfoComponent
+    DealInfoComponent,
+    UserregistrationComponent,
+    ConfirmComponent,
+    SelfregistrationComponent,
+    NewuserregistrationComponent
   ],
   imports: [
     BrowserModule,
-    HotTableModule,
-    AgGridModule.withComponents([AppComponent]),
     AngularSlickgridModule.forRoot()
   ],
   providers: [],

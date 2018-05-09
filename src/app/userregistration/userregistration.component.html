@@ -1,3 +1,11 @@
-<p>
-  userregistration works!
-</p>
+
+<div>
+  <nav>
+    <a *ngFor="let stage of stages">{{stage}}</a>
+  </nav>
+  <router-outlet></router-outlet>
+  <footer>
+    <button type="button" class="btn" (click)="goPrevious()">Previous</button>
+    <button type="button" class="btn" (click)="goNext()">Next</button>
+  </footer>
+</div>

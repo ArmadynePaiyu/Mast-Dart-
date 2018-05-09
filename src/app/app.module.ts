@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { AngularSlickgridModule } from 'angular-slickgrid';
 import * as $ from 'jquery';
 import { AppComponent } from './app.component';
@@ -41,9 +42,35 @@ import { CountryPlselectionComponent } from './userregistration/country-plselect
   ],
   imports: [
     BrowserModule,
-    AngularSlickgridModule.forRoot()
+    AngularSlickgridModule.forRoot(),
+    RouterModule.forRoot([
+      {
+        path: 'selfReg',
+        component: SelfregistrationComponent
+      },
+      {
+        path: 'newUserReg',
+        component: NewuserregistrationComponent
+      },
+      {
+        path: 'country',
+        component: CountryPlselectionComponent
+      },
+      {
+        path: 'prodLines',
+        component: CountryPlselectionComponent
+      },
+      {
+        path: 'summary',
+        component: ConfirmComponent
+      },
+      {
+        path: 'confirm',
+        component: ConfirmComponent
+      }
+    ])
   ],
   providers: [],
-  bootstrap: [CountryPlselectionComponent]
+  bootstrap: [UserregistrationComponent]
 })
 export class AppModule { }

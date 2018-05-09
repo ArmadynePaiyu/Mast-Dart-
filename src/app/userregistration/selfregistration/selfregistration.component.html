@@ -1,3 +1,17 @@
-<p>
-  selfregistration works!
-</p>
+<div class="col-md-12">
+<div class="col-md-12" *ngFor="let selfRegObj of selfReg" style="margin-bottom: 20px;">
+<!--<h4 class="">{{selfRegObj.title}}</h4>
+  <p class="">{{selfRegObj.radiOptions.opt}}</p>-->
+<div class="row">
+<div class="col-md-4 label-bold"  *ngFor="let item of selfRegObj.title">
+  <label >{{item}}</label>
+</div>
+</div>
+<div class="row label-normal">
+<div class="form-check form-check-inline col-md-4" style=" margin:0px; padding:0px 0px 5px 5px;" *ngFor="let options of selfRegObj.radiOptions">
+<input class="form-check-input " type="radio" name=[item] id="" value="">
+<label class="form-check-label" for="inlineRadio1">{{options.opt}}</label>
+</div>
+</div>
+</div>
+</div>

@@ -20,6 +20,7 @@ import { ConfirmComponent } from './userregistration/confirm/confirm.component';
 import { SelfregistrationComponent } from './userregistration/selfregistration/selfregistration.component';
 import { NewuserregistrationComponent } from './userregistration/newuserregistration/newuserregistration.component';
 import { CountryPlselectionComponent } from './userregistration/country-plselection/country-plselection.component';
+import { SidenavComponent } from './section/sidenav/sidenav.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { CountryPlselectionComponent } from './userregistration/country-plselect
     ConfirmComponent,
     SelfregistrationComponent,
     NewuserregistrationComponent,
-    CountryPlselectionComponent
+    CountryPlselectionComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
@@ -71,6 +73,6 @@ import { CountryPlselectionComponent } from './userregistration/country-plselect
     ])
   ],
   providers: [],
-  bootstrap: [UserregistrationComponent]
+  bootstrap: [SidenavComponent]
 })
 export class AppModule { }

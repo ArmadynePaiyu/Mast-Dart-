@@ -171,10 +171,7 @@ font-size:24px;
 .mar-bottom24{
     margin-bottom: 24px;
 }
-.override-label{
-    margin-bottom: 0px !important;
-    padding-left: 0px !important;
-}
+
 .card-margin{
     margin-top: 20px;
     margin-bottom: 16px;

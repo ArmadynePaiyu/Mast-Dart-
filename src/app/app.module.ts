@@ -4,8 +4,8 @@ import { RouterModule } from '@angular/router';
 import { AngularSlickgridModule } from 'angular-slickgrid';
 import * as $ from 'jquery';
 import { AppComponent } from './app.component';
-import { FilterComponentComponent } from './filter-component/filter-component.component';
-import { ExcelComponent } from './excel/excel.component';
+// import { FilterComponentComponent } from './filter-component/filter-component.component';
+// import { ExcelComponent } from './excel/excel.component';
 import { Grid1Component } from './grid1/grid1.component';
 import 'slickgrid';
 import 'jquery-ui';
@@ -26,8 +26,6 @@ import { SidenavComponent } from './section/sidenav/sidenav.component';
 @NgModule({
   declarations: [
     AppComponent,
-    FilterComponentComponent,
-    ExcelComponent,
     Grid1Component,
     MenuComponent,
     SectionComponent,
@@ -73,6 +71,6 @@ import { SidenavComponent } from './section/sidenav/sidenav.component';
     ])
   ],
   providers: [],
-  bootstrap: [SidenavComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

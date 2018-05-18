@@ -98,13 +98,36 @@ color: #e9ecef;
     color: #ffffff;
 }
 .label-black{
-    color: #333333;
+    color: #333333 !important;
 }
 .label-green{
     color:#25ae88;
 }
 .label-grey{
-    color: #aaaaaa;
+    color: #aaaaaa !important;
+}
+.font-green{
+    color: #00b388;
+}
+.bg-colorgreen{
+    background-color: #00b388;
+}
+.bg-colorltgrey{
+    background-color: lightgrey;
+}
+.bg-colorgrey{
+    background-color: grey;
+}
+.btncolor-green{
+    width: 113.9px;
+    height: 30.8px;
+    background-color: #00b388;
+    border-radius: 2.5px;
+    border: solid 1px #25ae88;
+    font-stretch: normal;
+}
+.font8{
+    font-size:8px;
 }
 .font12{
     font-size: 12px;
@@ -135,7 +158,7 @@ font-size:24px;
     padding-top: 15px;
 }
 .padding-top22{
-    padding-top: 22px;
+    padding-top: 22px !important;
 }
 .padding-top19{
     padding-top: 19px;
@@ -162,9 +185,7 @@ font-size:24px;
     margin-right: 15px;
 }
 
-.font-green{
-    color: #00b388;
-}
+
 .font16{
     font-size: 16px;
 }
@@ -187,8 +208,8 @@ font-size:24px;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: white;
-    color: black;
+    background-color: green;
+    color: white;
     text-align: center;
 }
 .action-btn{

@@ -12,7 +12,8 @@ import { MarginSummaryComponent } from './section/margin-summary/margin-summary.
 import { MarginDetailComponent } from './section/margin-detail/margin-detail.component';
 import { DealInfoComponent } from './section/deal-info/deal-info.component';
 import { SidenavComponent } from './section/sidenav/sidenav.component';
-
+import { GoalSeekComponent } from './section/goal-seek/goal-seek.component';
+import { AnnouncementComponent } from './section/announcement/announcement.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { SidenavComponent } from './section/sidenav/sidenav.component';
     MarginSummaryComponent,
     MarginDetailComponent,
     DealInfoComponent,
-    SidenavComponent
+    SidenavComponent,
+    GoalSeekComponent,
+    AnnouncementComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,29 @@
+.goalseekpop-up{
+    width: 478px;
+  height: auto;
+}
+.pop-up-btn{
+    width: 100%;
+}
+.exclude-popup{
+     width: 378px;
+  height: auto;
+}
+.border{
+     border: solid 1px #ececec;
+}
+.coustmization{
+  width: 1340px;
+  height: auto;
+}
+.center-coustmization{
+    margin:0 auto;
+    width:95%;
+}
+.coustmization-btn{
+    margin-left: 44%;
+    margin-bottom: 10px;
+    border-radius: 0.5px;
+    width: 15%;
+    padding: 3px;
+}

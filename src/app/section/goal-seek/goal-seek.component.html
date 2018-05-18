@@ -1,0 +1,171 @@
+<div>
+  <li data-toggle="modal" data-target="#myModal" >Goal Seek</li>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+     
+      <div class="modal-content goalseekpop-up">
+        <div class='center'>
+            
+          <button type="button" class="close label-black padding-top22 font24" data-dismiss="modal">&times;</button>
+          <h3 class='label-black pad-left0 padding-top22 label-bold font24 override-label'>GoalSeek</h3>
+
+
+
+          <p class='label-grey margin-top0 font16 override-label'>please select the changes you want</p>
+
+
+          <div class="padding-top19">
+            <select id="inputState" class="form-control bg-colorltgrey label-normal">
+        <option selected>Metric...</option>
+        <option>...</option>
+      </select>
+          </div>
+          <div class="padding-top5">
+            <input type="text" class="form-control bg-colorltgrey label-normal label-grey" placeholder="Enter Target Value">
+          </div>
+          <div class='col-12 padding-top19 pad-left0'>
+            <label class='col-4 label-bold font12 label-black'>Select Method</label>
+
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label col-4 label-black label-normal font12" for="exampleRadios2">Flat Discount
+  </label>
+
+
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label label-grey label-normal font12" for="exampleRadios2"> Proportional
+  </label>
+          </div>
+          <div class='col-12 pad-left0'>
+            <label class='col-4'>  </label>
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label col-4 label-grey label-normal font12" for="exampleRadios2"> Flat Metric
+  </label>
+
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label  label-grey label-normal font12" for="exampleRadios2"> Guidance
+  </label>
+          </div>
+
+
+          <div class="col-12 padding-top19 pad-left0">
+            <label class='col-6 label-black label-bold font12'>Apply To PL
+      </label>
+            <label>
+          <select id="inputState" class="form-control  label-normal">
+        <option selected>Across All...</option>
+        <option>...</option>
+      </select>
+          </label>
+          </div>
+
+          <div class="col-12 pad-left0">
+            <label class='col-6 label-black label-bold font12'>Apply To Product category
+      </label>
+            <label>
+          <select id="inputState" class="form-control label-normal">
+        <option selected>Across All...</option>
+        <option>...</option>
+      </select>
+          </label>
+          </div>
+
+        </div>
+
+        <div>
+  <button type="button" class="btn bg-colorgreen label-white goalseekpop-up" data-dismiss="modal">CALCULATE</button>
+  </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+<div>
+  <li data-toggle="modal" data-target="#myModal">Export Current View</li>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+
+      <div class="modal-content goalseekpop-up">
+        <table class="table">
+          <thead>
+            <tr class='bg-colorgrey label-bold label-white'>
+              <th scope="col">Code</th>
+              <th scope="col">Meaning</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr class='label-normal label-black' *ngFor=" let prod of productnotes">
+              <td>{{prod.title}}</td>
+              <td>{{prod.reason}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--<div>
+  <li data-toggle="modal" data-target="#myModal">Goal Seek</li>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+
+      <div class="modal-content exclude-popup">
+        <div class='center'>
+          <button type="button" class="close label-black padding-top22 font24" data-dismiss="modal">&times;</button>
+          <h3 class='label-black pad-left0 padding-top22 label-semibold font24 override-label'>Exclude Hierarchy Level</h3>
+
+          <div class="padding-top19">
+            <select id="inputState" class="form-control bg-colorltgrey label-normal">
+        <option selected>please select the level to exclude!</option>
+        <option>...</option>
+      </select>
+          </div>
+          <div class="padding-top5">
+            <input type="text" class="form-control bg-colorltgrey label-normal label-grey" placeholder="">
+          </div>
+          <div class="pad-top10">
+          <input type="checkbox" aria-label="Checkbox for following text input">
+          <label class="label-normal label-black">44</label></div>
+        </div>
+        <div>
+          <button type="button" class="btn bg-colorgreen label-white goalseekpop-up-btn" data-dismiss="modal">CALCULATE</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>-->
+
+<!--<div>
+  <li data-toggle="modal" data-target="#myModal">Goal Seek</li>
+  <div class="modal fade center" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content coustmization override-label padding-leftright0">
+        <div class='center-coustmization'>
+          <h3 class='label-black pad-left0 padding-top22 label-bold font24 override-label'>Customization Page</h3>
+          <p class='label-grey margin-top0 font16 override-label'>please select the options to change the summary grid</p>
+          <div class='col-12 padding-top19 pad-left0'>
+            <label class='col-3 label-bold font12 label-black'>Available Metric Groups</label>
+            <label class='col-3 label-bold font12 label-black'>Available Metric Fields</label>
+            <label class='col-3 label-bold font12 label-black'>Selected Fields</label>
+          </div>
+        </div>
+        <div>
+           <button type="button" class="btn bg-colorgreen label-white coustmization-btn" data-dismiss="modal">SAVE CHANGES</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>-->

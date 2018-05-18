@@ -1,0 +1,28 @@
+<div class='center'>
+  <div class='row'>
+    <ul class="nav">
+      <li class="nav-item nav-link active">
+        Deal
+      </li>
+      <li class="nav-item nav-link active">
+        MyMast
+      </li>
+      <li class="nav-item  nav-link active">
+        Help
+      </li>
+    </ul>
+  </div>
+  <div class='padding-top22'>
+    <h1 class='label-bold label-black override-label'>ANNOUNCEMENTS</h1>
+  </div>
+  <div class="padding-top22" *ngFor=" let item of announcement">    
+ 
+    <label class='font16 label-black label-bold override-label'> {{item.title}}</label>
+     <p  class='font16 label-black label-normal override-label'> {{item.reason}}</p>
+     
+</div>
+
+  <div class='padding-top22'>
+    <button class=" padding-top5 label-medium label-white inline-block btncolor-green">Continue</button>
+  </div>
+</div>

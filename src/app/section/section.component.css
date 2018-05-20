@@ -1,11 +1,11 @@
 .mast-tabs{
     background-color: #ffffff;
     box-shadow: 0 0 3px 0 rgba(62, 62, 62, 0.16);
-    padding: 22px 0px 19px 0px;
+    padding: 10px 0px 0px 0px;
 }
 .mast-tabs li{
     margin-left: 46px;
-    font-size: 18px;
+    font-size: 16px;
 }
 .mast-tabs li a{
     color: #888888;
@@ -16,4 +16,8 @@
     color: #283d3f;
     background-color: #fff;
     border-bottom: solid 3px #01a982;
+}
+
+.nav-pills .nav-link {
+    border-radius: 0px;
 }

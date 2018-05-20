@@ -1,6 +1,8 @@
 .wrapper {
     display: block;
 }
+
+
 #sidebar {
     min-width: 238px;
     max-width: 238px;
@@ -14,3 +16,44 @@
     padding: 20px
 }
 
+
+/* Nikhils styled this on 19th MAY  */
+
+.font-size14{
+    font-size : 14px;
+}
+
+.label-green {
+margin-bottom : 10px;
+margin-top:30px;
+font-size: 14px;
+
+}
+
+.li-between-spacing{
+    margin-top: 8px;
+}
+
+.margin-top15{
+    margin-top:25px;
+}
+
+.hpe-logo {
+    width : 100%;
+    position : absolute ;
+    bottom : 20px;
+}
+
+#inputState {
+    background: none;
+    /* border-radius: 0px; */
+    border-bottom: 0px solid #fff;
+    border: 1px solid #fff;
+    height : 30px !important;
+    color:#fff;
+}
+
+#inputState:hover {
+    border : 2px solid #25ae88;
+    color:fff;
+}

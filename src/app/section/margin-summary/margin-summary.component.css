@@ -1,0 +1,53 @@
+/*.cell-effort-driven {
+      text-align: center;
+    }
+    .slick-group-title[level='0'] {
+      font-weight: bold;
+    }
+    .slick-group-title[level='1'] {
+      text-decoration: underline;
+    }
+    .slick-group-title[level='2'] {
+      font-style: italic;
+    }
+
+     .slick-group-toggle {
+        height: 9px;
+        margin-right: 5px;
+        width: 9px;
+    }
+.slick-group-toggle.expanded {
+        background: url("http://mleibman.github.io/SlickGrid/images/collapse.gif") no-repeat scroll center center rgba(0, 0, 0, 0) !important;
+        height: 10px;
+        width: 10px;}
+    .expanded {
+        background: url("http://mleibman.github.io/SlickGrid/images/collapse.gif") no-repeat scroll center center rgba(0, 0, 0, 0) !important;
+        height: 10px;
+        width: 10px;}
+    .slick-group-toggle.collapsed {
+        background: url("http://mleibman.github.io/SlickGrid/images/expand.gif") no-repeat scroll center center rgba(0, 0, 0, 0) !important;
+    }
+    .collapsed {
+        background: url("http://mleibman.github.io/SlickGrid/images/expand.gif") no-repeat scroll center center rgba(0, 0, 0, 0) !important;
+        height: 10px;
+        width: 10px;
+        }*/
+        #myGrid{
+            font-size: 12px !important;
+        };
+        input.editor-text{
+            width: 100% !important;
+        }
+
+        .icon-highlight-off,
+   /* .icon-highlight-on {
+      background-image: url(../images/bullet_blue.png);
+    }*/
+    .icon-highlight-off {
+      opacity: 0.2;
+    }
+    .negative-highlight {
+      background: red;
+    }
+   /* .slick-header ui-state-default{
+                      }*/

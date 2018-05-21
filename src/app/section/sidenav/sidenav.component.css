@@ -40,8 +40,7 @@ font-size: 14px;
 
 .hpe-logo {
     width : 100%;
-    position : absolute ;
-    bottom : 20px;
+    margin-top : 40px;
 }
 
 #inputState {

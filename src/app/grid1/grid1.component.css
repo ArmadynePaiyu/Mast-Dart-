@@ -34,4 +34,6 @@
 .slick-viewport .slick-row.totals {
     position: relative;
 }
-
+.editable{
+  color:blue !important;
+}

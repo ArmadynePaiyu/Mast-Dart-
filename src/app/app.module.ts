@@ -14,6 +14,7 @@ import { DealInfoComponent } from './section/deal-info/deal-info.component';
 import { SidenavComponent } from './section/sidenav/sidenav.component';
 import { GoalSeekComponent } from './section/goal-seek/goal-seek.component';
 import { AnnouncementComponent } from './section/announcement/announcement.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -25,21 +26,22 @@ import { AnnouncementComponent } from './section/announcement/announcement.compo
     DealInfoComponent,
     SidenavComponent,
     GoalSeekComponent,
-    AnnouncementComponent
+    AnnouncementComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
     AngularSlickgridModule.forRoot(),
-    /* RouterModule.forRoot([
+     RouterModule.forRoot([
       {
-        path: 'selfReg',
-        component: SelfregistrationComponent
+        path: '',
+        component: AnnouncementComponent,
       },
       {
-        path: 'newUserReg',
-        component: NewuserregistrationComponent
+        path: 'home',
+        component:  HomepageComponent
       },
-      {
+     /* {
         path: 'country',
         component: CountryPlselectionComponent
       },
@@ -54,8 +56,8 @@ import { AnnouncementComponent } from './section/announcement/announcement.compo
       {
         path: 'confirm',
         component: ConfirmComponent
-      }
-    ]) */
+      }*/
+    ]) 
   ],
   providers: [],
   bootstrap: [AppComponent]

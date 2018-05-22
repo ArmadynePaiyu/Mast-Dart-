@@ -22,8 +22,9 @@
       <li class="label-medium font-size14   label-white li-between-spacing">Export Current View</li>
       <li class="label-normal font-size14  label-grey li-between-spacing">Report Cost Issue</li>
       <li class="label-normal font-size14  label-grey li-between-spacing">Expand All</li>
-      <li class="label-normal font-size14  label-grey li-between-spacing">Select All</li>
-      <li class="label-normal font-size14  label-grey li-between-spacing">Unselect All</li>
+      <li class="label-normal font-size14  label-grey li-between-spacing" (click)="collapseAll()">Collapse All</li>
+      <li class="label-normal font-size14  label-grey li-between-spacing" (click)="selectAll()">Select All</li>
+      <li class="label-normal font-size14  label-grey li-between-spacing" (click)="unselectAll()">Unselect All</li>
 </div>
 <div>
       <li class="active  label-bold font-size14 label-green no-marleftright ">Analysis Settings</li>

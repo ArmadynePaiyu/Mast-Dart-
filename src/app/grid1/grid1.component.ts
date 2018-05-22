@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularSlickgridModule } from 'angular-slickgrid';
 import * as $ from 'jquery';
 import 'slickgrid';
+import {SharedService} from '../providers/shared.service';
 declare var Slick: any;
 declare var TotalsPlugin: any;
 declare var TotalsDataView: any;
@@ -13,7 +14,7 @@ declare var TotalsDataView: any;
 })
 export class Grid1Component implements OnInit {
   gridCopy;
-  constructor() {
+  constructor(private shared:SharedService) {
     var columnsWithHighlightingById = {};
     var editFormatter=function(row, cell, value, columnDef, dataContext){
      console.log("row, cell, value, columnDef, dataContext"+ row+ cell+ value+ columnDef+ dataContext);
@@ -36,18 +37,19 @@ export class Grid1Component implements OnInit {
     var toggleFormatter = function (row, cell, value, columnDef, dataContext) {
       value = value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
       var spacer = "<span style='display:inline-block;height:1px;width:" + (15 * dataContext["indent"]) + "px'></span>";
-      var idx = dataView.getIdxById(dataContext.id);
+      var idx = marginDetailsDataView.getIdxById(dataContext.id);
+
       if (data[idx + 1] && data[idx + 1].indent > data[idx].indent) {
         if (dataContext._collapsed) {
-          return spacer + " <span class='toggle expand' style='font-size:large'>+</span>" + value;
+          return spacer + " <span class='toggle expand' style='font-size:large;display: inline-block !important;'>+</span>" + value;
         } else {
-          return spacer + " <span class='toggle collapse' style='font-size:large'>-</span>" + value;
+          return spacer + " <span class='toggle collapse' style='font-size:large;display: inline-block !important;'>-</span>" + value;
         }
       } else {
         return spacer + " <span class='toggle'></span>&nbsp;" + value;
       }
     };
-    var dataView;
+    var marginDetailsDataView;
     var grid;
     var data = [];
     var checkboxSelector = new Slick.CheckboxSelectColumn({
@@ -56,11 +58,7 @@ export class Grid1Component implements OnInit {
        var columns=[];
      // columns.push(checkboxSelector.getColumnDefinition());
     var columnsDef = [
-      /*{ id: "title", name: "Title", field: "title", formatter: toggleFormatter },
-      { id: "amount", name: "Amount", field: "amount" ,editor: Slick.Editors.Text,hasTotal:true},
-      { id: "weight", name: "Weight", field: "weight" ,editor: Slick.Editors.Text,hasTotal:true}*/
-      // { id: "checkBox", name: "<input type='checkbox'> ", field: "checkBox"},
-      // { id: "Toggle", name: " Toggle", field: "" ,formatter: toggleFormatter },
+     
       { id: "configNumber", name: "Active", field: "configNumber"  },
       { id: "prod", name: "Line#", field: "prod" },
       { id: "opt", name: "Notes", field: "opt" },
@@ -191,19 +189,21 @@ var dataContainer = {};
       }
       //checkbox selction for each row
          
-
+      console.log(data);
       // initialize the model
 
-      dataView = new Slick.Data.DataView();
-      dataView.beginUpdate();
-      dataView.setItems(data);
-      dataView.setFilter(myFilter);
-      dataView.endUpdate();
+      marginDetailsDataView = new Slick.Data.DataView();
+      marginDetailsDataView.beginUpdate();
+      marginDetailsDataView.setItems(data);
+      marginDetailsDataView.setFilter(myFilter);
+      marginDetailsDataView.endUpdate();
      // dataView.setAggregators([ new Slick.Data.Aggregators.Sum("value") ], false);
-
+//      for(var l=0; l<7; l++) {
+//   marginDetailsDataView.collapseGroup(l);
+// }
       // initialize the grid
       //var dataProvider = new TotalsDataView(dataView, columns);
-      grid = new Slick.Grid("#myGrid", dataView, columns, options);
+      grid = new Slick.Grid("#myGrid", marginDetailsDataView, columns, options);
     
       var headerButtonsPlugin = new Slick.Plugins.HeaderButtons();
     headerButtonsPlugin.onCommand.subscribe(function(e, args) {
@@ -334,7 +334,7 @@ var selectActiveRow =  false,selectedRows;
         }));
        grid.onClick.subscribe(function (e,args) {
             if ($(e.target).hasClass("toggle")) {
-          var item = dataView.getItem(args.row);
+          var item = marginDetailsDataView.getItem(args.row);
           if (item) {
             if (!item._collapsed) {
               item._collapsed = true;
@@ -342,7 +342,7 @@ var selectActiveRow =  false,selectedRows;
               item._collapsed = false;
             }
 
-            dataView.updateItem(item.id, item);
+            marginDetailsDataView.updateItem(item.id, item);
           }
           e.stopImmediatePropagation();
         } 
@@ -364,18 +364,20 @@ var selectActiveRow =  false,selectedRows;
 //       });
 
       // wire up model events to drive the grid
-      dataView.onRowCountChanged.subscribe(function (e, args) {
+      marginDetailsDataView.onRowCountChanged.subscribe(function (e, args) {
         grid.updateRowCount();
         grid.render();
         
       });
 
-      dataView.onRowsChanged.subscribe(function (e, args) {
+      marginDetailsDataView.onRowsChanged.subscribe(function (e, args) {
      
         grid.invalidateRows(args.rows);
         grid.render();
         
       });
+      shared.setMarginDetailsGrid(grid);
+      shared.setDataView(marginDetailsDataView);
     })
   }
 

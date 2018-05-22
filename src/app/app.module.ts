@@ -15,7 +15,7 @@ import { SidenavComponent } from './section/sidenav/sidenav.component';
 import { GoalSeekComponent } from './section/goal-seek/goal-seek.component';
 import { AnnouncementComponent } from './section/announcement/announcement.component';
 import { HomepageComponent } from './homepage/homepage.component';
-
+import {SharedService} from './providers/shared.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +59,7 @@ import { HomepageComponent } from './homepage/homepage.component';
       }*/
     ]) 
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

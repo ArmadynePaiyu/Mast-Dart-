@@ -1,0 +1,27 @@
+<div>
+  <label class='label-semibold labelblack'>Available Metric Fields</label>
+  <div id="accordion" *ngFor="let group of metricGroup">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              {{group}}
+        </button>
+        </h5>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+          <p>Group Disc %</p>
+          <p>Gross Revenue</p>
+          <p>Total Discount %</p>
+          <p>Extended BDNet</p>
+          <p>Net Revenue</p>
+          <p>Total Contra%</p>
+          <p>Total Contra</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

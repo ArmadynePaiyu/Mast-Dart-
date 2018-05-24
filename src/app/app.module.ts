@@ -16,6 +16,11 @@ import { GoalSeekComponent } from './section/goal-seek/goal-seek.component';
 import { AnnouncementComponent } from './section/announcement/announcement.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import {SharedService} from './providers/shared.service';
+import { CustomisationPageComponent } from './customisation-page/customisation-page.component';
+import { LifeRayComponent } from './life-ray/life-ray.component';
+import { MetricGroupsComponent } from './customisation-page/metric-groups/metric-groups.component';
+import { MetricFieldsComponent } from './customisation-page/metric-fields/metric-fields.component';
+import { SelectedFieldsComponent } from './customisation-page/selected-fields/selected-fields.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +32,12 @@ import {SharedService} from './providers/shared.service';
     SidenavComponent,
     GoalSeekComponent,
     AnnouncementComponent,
-    HomepageComponent
+    HomepageComponent,
+    CustomisationPageComponent,
+    LifeRayComponent,
+    MetricGroupsComponent,
+    MetricFieldsComponent,
+    SelectedFieldsComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +70,6 @@ import {SharedService} from './providers/shared.service';
     ]) 
   ],
   providers: [SharedService],
-  bootstrap: [AppComponent]
+  bootstrap: [CustomisationPageComponent]
 })
 export class AppModule { }

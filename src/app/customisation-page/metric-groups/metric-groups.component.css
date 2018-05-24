@@ -1,0 +1,14 @@
+.coust-center{
+    margin: 0 auto;
+    width: 94%;
+}
+
+.customisation-btn{
+    margin-left: 44%;
+    margin-bottom: 10px;
+    border-radius: 0.5px;
+    width: 15%;
+    padding: 3px;
+    background-color:  #01a982;
+    float:right;
+}

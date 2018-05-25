@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
 import { AngularSlickgridModule } from 'angular-slickgrid';
 import * as $ from 'jquery';
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { LifeRayComponent } from './life-ray/life-ray.component';
 import { MetricGroupsComponent } from './customisation-page/metric-groups/metric-groups.component';
 import { MetricFieldsComponent } from './customisation-page/metric-fields/metric-fields.component';
 import { SelectedFieldsComponent } from './customisation-page/selected-fields/selected-fields.component';
+import { RolloutComponent } from './rollout/rollout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,10 +39,12 @@ import { SelectedFieldsComponent } from './customisation-page/selected-fields/se
     LifeRayComponent,
     MetricGroupsComponent,
     MetricFieldsComponent,
-    SelectedFieldsComponent
+    SelectedFieldsComponent,
+    RolloutComponent
   ],
   imports: [
     BrowserModule,
+     HttpClientModule,
     AngularSlickgridModule.forRoot(),
      RouterModule.forRoot([
       {

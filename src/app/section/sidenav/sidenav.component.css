@@ -4,16 +4,9 @@
 
 
 #sidebar {
-    min-width: 238px;
-    max-width: 238px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    /* top layer */
-    z-index: 9999;
     background-color: #425563;
-    padding: 20px
+    padding: 20px;
+    height : 100%;
 }
 
 
@@ -36,11 +29,16 @@ font-size: 14px;
 
 .margin-top15{
     margin-top:25px;
+
 }
 
-.hpe-logo {
-    width : 100%;
-    margin-top : 40px;
+
+
+.hpe-logo img {
+    width : 110px;
+    position: absolute;
+    bottom:20px;
+    
 }
 
 #inputState {

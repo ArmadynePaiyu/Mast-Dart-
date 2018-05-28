@@ -18,11 +18,10 @@ import { AnnouncementComponent } from './section/announcement/announcement.compo
 import { HomepageComponent } from './homepage/homepage.component';
 import {SharedService} from './providers/shared.service';
 import { CustomisationPageComponent } from './customisation-page/customisation-page.component';
-
 import { MetricGroupsComponent } from './customisation-page/metric-groups/metric-groups.component';
 import { MetricFieldsComponent } from './customisation-page/metric-fields/metric-fields.component';
 import { SelectedFieldsComponent } from './customisation-page/selected-fields/selected-fields.component';
-import { RollOutComponent } from './section/roll-out/roll-out.component';
+import { RolloutComponent } from './rollout/rollout.component';
 import { CurrentlevelComponent } from './section/currentlevel/currentlevel.component';
 @NgModule({
   declarations: [
@@ -37,11 +36,10 @@ import { CurrentlevelComponent } from './section/currentlevel/currentlevel.compo
     AnnouncementComponent,
     HomepageComponent,
     CustomisationPageComponent,
-
     MetricGroupsComponent,
     MetricFieldsComponent,
     SelectedFieldsComponent,
-    RollOutComponent,
+    RolloutComponent,
     CurrentlevelComponent
   ],
   imports: [
@@ -73,10 +71,10 @@ import { CurrentlevelComponent } from './section/currentlevel/currentlevel.compo
         path: 'confirm',
         component: ConfirmComponent
       }*/
-    ]) 
+    ])
   ],
   providers: [SharedService],
-  
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

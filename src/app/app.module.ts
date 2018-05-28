@@ -18,11 +18,12 @@ import { AnnouncementComponent } from './section/announcement/announcement.compo
 import { HomepageComponent } from './homepage/homepage.component';
 import {SharedService} from './providers/shared.service';
 import { CustomisationPageComponent } from './customisation-page/customisation-page.component';
-import { LifeRayComponent } from './life-ray/life-ray.component';
+
 import { MetricGroupsComponent } from './customisation-page/metric-groups/metric-groups.component';
 import { MetricFieldsComponent } from './customisation-page/metric-fields/metric-fields.component';
 import { SelectedFieldsComponent } from './customisation-page/selected-fields/selected-fields.component';
-import { RolloutComponent } from './rollout/rollout.component';
+import { RollOutComponent } from './section/roll-out/roll-out.component';
+import { CurrentlevelComponent } from './section/currentlevel/currentlevel.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,11 +37,12 @@ import { RolloutComponent } from './rollout/rollout.component';
     AnnouncementComponent,
     HomepageComponent,
     CustomisationPageComponent,
-    LifeRayComponent,
+
     MetricGroupsComponent,
     MetricFieldsComponent,
     SelectedFieldsComponent,
-    RolloutComponent
+    RollOutComponent,
+    CurrentlevelComponent
   ],
   imports: [
     BrowserModule,
@@ -74,6 +76,7 @@ import { RolloutComponent } from './rollout/rollout.component';
     ]) 
   ],
   providers: [SharedService],
-  bootstrap: [CustomisationPageComponent]
+  
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
